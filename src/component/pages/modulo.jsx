@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import img1 from "../pages/moduloimages/img1.jpg";
 import img2 from "../pages/moduloimages/img2.jpg";
@@ -26,19 +28,17 @@ import Header from "../pages/Header";
 export default function Modulo() {
   return (
     <>
-      {/* Make the whole page scrollable, including the header */}
       <div className="overflow-y-scroll h-screen">
         <Header />
         <div className="flex my-12 gap-[120px]">
-          {/* Right Side (Scrollable Images) */}
           <div id="nobar" className="scroll-smooth h-full overflow-y-scroll">
             <div className="space-y-9 mx-16">
-              <img
+              <LazyLoadImage
                 src={img1}
                 alt="Modulo Image 1"
-                className="w-full rounded-[4px] h-full object-cover "
+                className="w-full rounded-[4px] h-full object-cover"
               />
-              <div className="">
+              <div>
                 <h1 className="text-[16px] font-semibold mb-4">Modulo</h1>
                 <p className="text-[14px] font-normal">
                   A pair of headphones designed to empower users to repair
@@ -50,130 +50,71 @@ export default function Modulo() {
                 </p>
                 <p className="mt-2 text-[14px] font-normal">Date: May 2023.</p>
               </div>
-              <div className="">
-                <img
-                  src={img2}
-                  alt="Modulo Image 2"
+              {[img2, img3, img4, img5].map((image, index) => (
+                <LazyLoadImage
+                  key={index}
+                  src={image}
+                  alt={`Modulo Image ${index + 2}`}
                   className="w-full h-full rounded-[4px] object-cover"
                 />
-              </div>
-              <div className="">
-                <img
-                  src={img3}
-                  alt="Modulo Image 3"
-                  className="w-full h-full rounded-[4px] object-cover"
-                />
-              </div>
-              <div className="">
-                <img
-                  src={img4}
-                  alt="Modulo Image 4"
-                  className="w-full h-full rounded-[4px] object-cover"
-                />
-              </div>
-              <div className="">
-                <img
-                  src={img5}
-                  alt="Modulo Image 5"
-                  className="w-full h-full rounded-[4px] object-cover"
-                />
-              </div>
+              ))}
             </div>
 
-            {/* Mobile Screen Images with margin */}
+            {/* Mobile Screen Images */}
             <div>
-              <div className="grid grid-flow-row grid-cols-7 gap-6 mt-9 mx-16 ">
-                <img
-                  src={MobileScreenImage1}
-                  alt="Mobile Screen 1"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage2}
-                  alt="Mobile Screen 2"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage3}
-                  alt="Mobile Screen 3"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage4}
-                  alt="Mobile Screen 4"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage5}
-                  alt="Mobile Screen 5"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage6}
-                  alt="Mobile Screen 6"
-                  className="object-cover rounded-[4px]"
-                />
-                <img
-                  src={MobileScreenImage7}
-                  alt="Mobile Screen 7"
-                  className="object-cover rounded-[4px]"
-                />
-              </div>
-            </div>
-            <div className="mt-9 mx-16">
-              <div>
-                <img
-                  src={img7}
-                  alt="Modulo Image 1"
-                  className="w-full h-full rounded-[4px] object-cover"
-                />
+              <div className="grid grid-flow-row grid-cols-7 gap-6 mt-9 mx-16">
+                {[
+                  MobileScreenImage1,
+                  MobileScreenImage2,
+                  MobileScreenImage3,
+                  MobileScreenImage4,
+                  MobileScreenImage5,
+                  MobileScreenImage6,
+                  MobileScreenImage7,
+                ].map((image, index) => (
+                  <LazyLoadImage
+                    key={index}
+                    src={image}
+                    alt={`Mobile Screen ${index + 1}`}
+                    className="object-cover rounded-[4px]"
+                  />
+                ))}
               </div>
             </div>
 
-            {/* 3D Images with margin */}
+            <div className="mt-9 mx-16">
+              <LazyLoadImage
+                src={img7}
+                alt="Modulo Image 7"
+                className="w-full h-full rounded-[4px] object-cover"
+              />
+            </div>
+
+            {/* 3D Images */}
             <div className="grid grid-cols-2 gap-4 my-9 mx-16">
               <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <img
-                    src={module3dimg}
-                    alt="Modulo Image 1"
-                    className="w-full h-full rounded-[4px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={module3dimg2}
-                    alt="Modulo Image 2"
-                    className="w-full h-full rounded-[4px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={module3dimg3}
-                    alt="Modulo Image 3"
-                    className="w-full h-full rounded-[4px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={module3dimg4}
-                    alt="Modulo Image 4"
-                    className="w-full h-full rounded-[4px] object-cover"
-                  />
-                </div>
+                {[module3dimg, module3dimg2, module3dimg3, module3dimg4].map(
+                  (image, index) => (
+                    <LazyLoadImage
+                      key={index}
+                      src={image}
+                      alt={`Modulo 3D Image ${index + 1}`}
+                      className="w-full h-full rounded-[4px] object-cover"
+                    />
+                  )
+                )}
               </div>
-              <div>
-                <img
-                  src={module3dimg5}
-                  alt="Modulo Large Image"
-                  className="w-full h-full rounded-[4px] object-cover"
-                />
-              </div>
+              <LazyLoadImage
+                src={module3dimg5}
+                alt="Modulo Large Image"
+                className="w-full h-full rounded-[4px] object-cover"
+              />
             </div>
+
             <div className="mt-9 mx-16">
-              <img
+              <LazyLoadImage
                 src={img9}
-                alt="Modulo Image 1"
+                alt="Modulo Image 9"
                 className="w-full h-full rounded-[4px] object-cover"
               />
             </div>

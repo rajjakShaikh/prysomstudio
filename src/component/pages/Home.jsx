@@ -1,10 +1,10 @@
 import React from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // Register Swiper modules
 SwiperCore.use([Autoplay, EffectFade]);
@@ -27,7 +27,7 @@ export default function Home() {
           <Swiper
             modules={[Autoplay, EffectFade]}
             autoplay={{
-              delay: 2000,
+              // delay: 2000,
               disableOnInteraction: false,
             }}
             effect="fade"
@@ -37,43 +37,53 @@ export default function Home() {
           >
             <SwiperSlide>
               <NavLink to={"/work/modulo"}>
-                <img
+                <LazyLoadImage
                   src={imagenew}
                   alt="Slide 1"
                   className="rounded-md w-full h-full"
+                  height="100%"
+                  width="100%"
                 />
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to={"/work/heat"}>
-                <img
+                <LazyLoadImage
                   src={homeimage2}
                   alt="Slide 2"
                   className="rounded-md w-full h-full"
+                  height="100%"
+                  width="100%"
                 />
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to={"work/casco"}>
-                <img
+                <LazyLoadImage
                   src={homeimage3}
                   alt="Slide 3"
                   className="rounded-md w-full h-full"
+                  height="100%"
+                  width="100%"
                 />
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
-              <img
+              <LazyLoadImage
                 src={home4}
-                alt="Slide 3"
+                alt="Slide 4"
                 className="rounded-md w-full h-full"
+                height="100%"
+                width="100%"
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img
+              <LazyLoadImage
                 src={home5}
-                alt="Slide 3"
+                alt="Slide 5"
                 className="rounded-md w-full h-full"
+                height="100%"
+                width="100%"
               />
             </SwiperSlide>
           </Swiper>

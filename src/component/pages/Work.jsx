@@ -7,6 +7,7 @@ import home4 from "../pages/images/home4.png";
 import home5 from "../pages/images/home5.png";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Work() {
   const navigate = useNavigate();
@@ -34,11 +35,14 @@ export default function Work() {
               onClick={() => navigate(image.path)}
             >
               {/* Image */}
-              <img
-                src={image.src}
+              <LazyLoadImage
                 alt={image.name}
+                src={image.src}
+                height="100%"
+                width="100%"
                 className="w-full h-auto cursor-pointer  rounded-md object-cover"
               />
+
               {/* Image name below the image */}
               <div className="mt-4 opacity-0 cursor-pointer group-hover:opacity-100 text-left text-xl text-black transition-opacity duration-300">
                 <span className="text-[16px] font-normal">{image.name}</span>
