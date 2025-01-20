@@ -21,153 +21,165 @@ import MobileScreenImage4 from "../pages/mobilescreenimages/4.png";
 import MobileScreenImage5 from "../pages/mobilescreenimages/5.png";
 import MobileScreenImage6 from "../pages/mobilescreenimages/6.png";
 import MobileScreenImage7 from "../pages/mobilescreenimages/7.png";
+import Header from "../pages/Header";
 
 export default function Modulo() {
   return (
-    <div className="flex mx-16 my-16 gap-[120px]">
-      {/* Left Side (Sticky Content) */}
-      <div className="w-[40%] sticky top-0 h-screen flex items-start">
-        <div>
-          <h1 className="text-[16px] font-semibold mb-4">Modulo</h1>
-          <p className="text-[14px] font-normal">
-            A pair of headphones designed to empower users to repair rather than
-            replace. <br /> <br />
-            Designed for self-assembly, these headphones invite users to engage
-            with the product on a deeper level, transforming it into an act of
-            discovery and connection with its inner workings. <br /> <br />
-            The exposed connection points act as signifiers that guide the user
-            during assembly or disassembly.
-          </p>
-        </div>
-      </div>
-
-      {/* Right Side (Scrollable Images) */}
-      <div
-        id="nobar"
-        className="w-[60%] scroll-smooth h-screen overflow-y-scroll"
-      >
-        <div className="space-y-9">
-          <img
-            src={img1}
-            alt="Modulo Image 1"
-            className="w-[768px] rounded-[4px] h-[438px] object-cover"
-          />
-          <img
-            src={img2}
-            alt="Modulo Image 2"
-            className="w-[768px] h-[438px] rounded-[4px] object-cover"
-          />
-          <img
-            src={img3}
-            alt="Modulo Image 3"
-            className="w-[768px] h-[438px] rounded-[4px] object-cover"
-          />
-          <img
-            src={img4}
-            alt="Modulo Image 4"
-            className="w-[768px] h-[438px] rounded-[4px] object-cover"
-          />
-          <img
-            src={img5}
-            alt="Modulo Image 5"
-            className="w-[768px] h-[438px] rounded-[4px] object-cover"
-          />
-        </div>
-        <div>
-          <div className="grid grid-flow-row grid-cols-7 gap-6 mt-9">
-            <img
-              src={MobileScreenImage1}
-              alt="Mobile Screen 1"
-              className="object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage2}
-              alt="Mobile Screen 2"
-              className=" object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage3}
-              alt="Mobile Screen 3"
-              className=" object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage4}
-              alt="Mobile Screen 4"
-              className=" object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage5}
-              alt="Mobile Screen 5"
-              className=" object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage6}
-              alt="Mobile Screen 6"
-              className="object-cover rounded-[4px]"
-            />
-            <img
-              src={MobileScreenImage7}
-              alt="Mobile Screen 7"
-              className="object-cover rounded-[4px]"
-            />
-          </div>
-        </div>
-        <div className="mt-9">
-          <div>
-            <img
-              src={img7}
-              alt="Modulo Image 1"
-              className="w-full h-[438px] rounded-[4px] object-cover"
-            />
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4 my-9">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
+    <>
+      {/* Make the whole page scrollable, including the header */}
+      <div className="overflow-y-scroll h-screen">
+        <Header />
+        <div className="flex my-12 gap-[120px]">
+          {/* Right Side (Scrollable Images) */}
+          <div id="nobar" className="scroll-smooth h-full overflow-y-scroll">
+            <div className="space-y-9 mx-16">
               <img
-                src={module3dimg}
+                src={img1}
                 alt="Modulo Image 1"
-                className="w-[180px] h-[102px] rounded-[4px] object-cover"
+                className="w-full rounded-[4px] h-full object-cover "
               />
+              <div className="">
+                <h1 className="text-[16px] font-semibold mb-4">Modulo</h1>
+                <p className="text-[14px] font-normal">
+                  A pair of headphones designed to empower users to repair
+                  rather than replace. Designed for self-assembly, these
+                  headphones invite users to engage with the product on a deeper
+                  level, transforming it into an act of discovery and connection
+                  with its inner workings. The exposed connection points act as
+                  signifiers that guide the user during assembly or disassembly.
+                </p>
+                <p className="mt-2 text-[14px] font-normal">Date: May 2023.</p>
+              </div>
+              <div className="">
+                <img
+                  src={img2}
+                  alt="Modulo Image 2"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
+              <div className="">
+                <img
+                  src={img3}
+                  alt="Modulo Image 3"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
+              <div className="">
+                <img
+                  src={img4}
+                  alt="Modulo Image 4"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
+              <div className="">
+                <img
+                  src={img5}
+                  alt="Modulo Image 5"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
             </div>
+
+            {/* Mobile Screen Images with margin */}
             <div>
-              <img
-                src={module3dimg2}
-                alt="Modulo Image 2"
-                className="w-[180px] h-[102px] rounded-[4px] object-cover"
-              />
+              <div className="grid grid-flow-row grid-cols-7 gap-6 mt-9 mx-16 ">
+                <img
+                  src={MobileScreenImage1}
+                  alt="Mobile Screen 1"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage2}
+                  alt="Mobile Screen 2"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage3}
+                  alt="Mobile Screen 3"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage4}
+                  alt="Mobile Screen 4"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage5}
+                  alt="Mobile Screen 5"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage6}
+                  alt="Mobile Screen 6"
+                  className="object-cover rounded-[4px]"
+                />
+                <img
+                  src={MobileScreenImage7}
+                  alt="Mobile Screen 7"
+                  className="object-cover rounded-[4px]"
+                />
+              </div>
             </div>
-            <div>
-              <img
-                src={module3dimg3}
-                alt="Modulo Image 3"
-                className="w-[180px] h-[102px] rounded-[4px] object-cover"
-              />
+            <div className="mt-9 mx-16">
+              <div>
+                <img
+                  src={img7}
+                  alt="Modulo Image 1"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
             </div>
-            <div>
+
+            {/* 3D Images with margin */}
+            <div className="grid grid-cols-2 gap-4 my-9 mx-16">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <img
+                    src={module3dimg}
+                    alt="Modulo Image 1"
+                    className="w-full h-full rounded-[4px] object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={module3dimg2}
+                    alt="Modulo Image 2"
+                    className="w-full h-full rounded-[4px] object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={module3dimg3}
+                    alt="Modulo Image 3"
+                    className="w-full h-full rounded-[4px] object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={module3dimg4}
+                    alt="Modulo Image 4"
+                    className="w-full h-full rounded-[4px] object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <img
+                  src={module3dimg5}
+                  alt="Modulo Large Image"
+                  className="w-full h-full rounded-[4px] object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-9 mx-16">
               <img
-                src={module3dimg4}
-                alt="Modulo Image 4"
-                className="w-[180px]  h-[102px] rounded-[4px] object-cover"
+                src={img9}
+                alt="Modulo Image 1"
+                className="w-full h-full rounded-[4px] object-cover"
               />
             </div>
           </div>
-          <div>
-            <img
-              src={module3dimg5}
-              alt="Modulo Large Image"
-              className="w-full h-[219px] rounded-[4px] object-cover"
-            />
-          </div>
-        </div>
-        <div className="mt-9">
-          <img
-            src={img9}
-            alt="Modulo Image 1"
-            className="w-full h-[438px] rounded-[4px] object-cover"
-          />
         </div>
       </div>
-    </div>
+    </>
   );
 }

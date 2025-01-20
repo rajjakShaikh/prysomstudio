@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       {/* Header Start */}
-      <div className="grid grid-cols-2 mx-16 mt-8 items-center">
+      <div className="grid grid-cols-2 mx-16 mt-12 items-center">
         <div className="rounded-[24px]">
           <img
             src={logo}
@@ -33,12 +33,13 @@ export default function Header() {
             </li>
             <li>
               <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[16px] text-[#000000] font-bold cursor-pointer"
-                    : "text-[16px] text-[#000000] font-normal cursor-pointer"
-                }
+                // to="/about"
+                // className={({ isActive }) =>
+                //   isActive
+                //     ? "text-[16px] text-[#000000] font-bold cursor-default"
+                //     : "text-[16px] text-[#000000] font-normal cursor-default"
+                // }
+                className="text-[16px] text-[#000000] font-normal cursor-default"
               >
                 About
               </NavLink>
