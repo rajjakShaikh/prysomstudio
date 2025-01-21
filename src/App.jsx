@@ -7,7 +7,7 @@ import About from "./component/pages/About";
 import Modulo from "./component/pages/modulo";
 import Heat from "./component/pages/heat";
 import Casco from "./component/pages/casco";
-import Comingsoon from "./component/pages/comingsoon";
+// import Comingsoon from "./component/pages/comingsoon";
 import NotFound from "./component/pages/Notfound";
 // import Comingsoon from "./component/pages/comingsoon";
 // import Eljunto from "./component/pages/eljunto";

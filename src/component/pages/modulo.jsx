@@ -81,7 +81,6 @@ const scrollContainerRef = useRef(null);
   }, []);
 
   return (
-  <>
    
       <div id="nobar" className="overflow-y-scroll h-screen" ref={scrollContainerRef}>
         <Header />
@@ -206,17 +205,8 @@ const scrollContainerRef = useRef(null);
 
       </div>
         
-            {/* Navigation arrows */}
-      {/* <div className=" left-4 top-1/2 transform -translate-y-1/2 flex items-center cursor-pointer" onClick={navigateToWork}>
-        <FontAwesomeIcon icon={faChevronLeft} className="text-2xl" />
-        <span className="ml-2">Back</span>
-      </div>
-      <div className="fixed  right-4 top-1/2 transform -translate-y-1/2 flex items-center cursor-pointer">
-        <span className="mr-2">Next</span>
-        <FontAwesomeIcon icon={faChevronRight} className="text-2xl" />
-      </div> */}
+         
    
-  </>
 
   );
 }

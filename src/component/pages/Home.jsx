@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Header />
       <div className="main-container mx-5 md:mx-16 my-5 md:my-12">
-        {/* Carousel Start */}
+        {/* Home page Carousel Start */}
         <div className="mt-9 flex justify-center">
           <Swiper
             modules={[Autoplay, EffectFade]}
@@ -88,7 +88,7 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* Carousel End */}
+        {/* Home Page Carousel End */}
       </div>
     </>
   );
