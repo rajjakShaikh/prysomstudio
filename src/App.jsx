@@ -8,6 +8,7 @@ import Modulo from "./component/pages/modulo";
 import Heat from "./component/pages/heat";
 import Casco from "./component/pages/casco";
 import Comingsoon from "./component/pages/comingsoon";
+import NotFound from "./component/pages/Notfound";
 // import Comingsoon from "./component/pages/comingsoon";
 // import Eljunto from "./component/pages/eljunto";
 // import KathaMehfil from "./component/pages/kathamehfil";
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/work/casco" element={<Casco />} />
           {/* <Route path="/work/el-junto" element={<Eljunto />} />
           <Route path="/work/katha-mehfil" element={<KathaMehfil />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>

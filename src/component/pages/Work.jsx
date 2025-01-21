@@ -26,8 +26,8 @@ export default function Work() {
     <>
       <Header />
 
-      <div className="mx-16 my-12">
-        <div className="grid grid-cols-3  gap-x-[60px] gap-y-[24px]">
+      <div className="mx-5 md:mx-16 my-12 md:my-12">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-x-[20px] md:gap-x-[60px] gap-y-[20px] md:gap-y-[24px]">
           {images.map((image, index) => (
             <div
               key={index}
@@ -44,7 +44,7 @@ export default function Work() {
               />
 
               {/* Image name below the image */}
-              <div className="mt-4 opacity-0 cursor-pointer group-hover:opacity-100 text-left text-xl text-black transition-opacity duration-300">
+              <div className="mt-4 opacity-100 md:opacity-0 cursor-pointer md:group-hover:opacity-100 text-left md:text-left text-xl text-black transition-opacity duration-300">
                 <span className="text-[16px] font-normal">{image.name}</span>
               </div>
             </div>

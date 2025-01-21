@@ -383,4 +383,24 @@
       100% 43.4%
     );
   }
-} */
+}
+
+/* Navigation arrows styles */
+.fixed {
+  z-index: 1000;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.fixed:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+.fixed span {
+  font-size: 16px;
+  font-weight: 500;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import img1 from "../pages/cascoImages/1.jpg";
 import img2 from "../pages/cascoImages/2.jpg";
@@ -8,8 +8,34 @@ import img5 from "../pages/cascoImages/5.jpg";
 import img6 from "../pages/cascoImages/6.png";
 import img7 from "../pages/cascoImages/7.png";
 import Header from "../pages/Header";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { NavLink, useNavigate } from "react-router-dom";
+import Scrollbar from "smooth-scrollbar";
+
 
 export default function Casco() {
+  const scrollContainerRef = useRef(null);
+
+  const navigate = useNavigate();
+  const navigateToWork = () => {
+    navigate("/work");
+  };
+  const navigateToNext=()=>{
+    navigate("/work/modulo")
+  }
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    const scrollbar = Scrollbar.init(scrollContainer, {
+      damping: 0.1, // Adjust damping for smoothness
+    });
+  
+    return () => {
+      scrollbar.destroy();
+    };
+  }, []);
+
   return (
     // <>
     //   <Header />
@@ -74,12 +100,15 @@ export default function Casco() {
     //     </div>
     //   </div>
     // </>
-    <div className="overflow-y-scroll h-screen">
+
+    <>
+    
+    <div className="overflow-y-scroll h-screen" ref={scrollContainerRef}>
       <Header />
       <div className="flex my-12 gap-[120px]">
         {/* Right Side (Scrollable Images) */}
         <div id="nobar" className="scroll-smooth h-full overflow-y-scroll">
-          <div className="space-y-9 mx-16">
+          <div className="space-y-9 mx-5 md:mx-16">
             <img
               src={img1}
               alt="Modulo Image 1"
@@ -142,6 +171,26 @@ export default function Casco() {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-2 mb-12 mx-5 md:mx-16">
+        <div className="flex items-center">
+          <NavLink to={"/work"}>
+          <FontAwesomeIcon icon={faChevronLeft} className="text-[14px]" />
+          <button onClick={navigateToWork} className="text-[14px] ml-2 text-black font-medium">Back</button>
+          </NavLink>
+          
+        </div>
+      
+        <div className="flex items-center justify-end">
+          <NavLink to={"/work/modulo"}>
+          <button onClick={navigateToNext} className="text-[14px] mr-2 text-black font-medium">Next</button>
+          <FontAwesomeIcon icon={faChevronRight} className="text-[14px]" />
+          </NavLink>
+         
+        </div>
+      </div>
     </div>
+
+    </>
   );
 }

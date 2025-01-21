@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       {/* Header Start */}
-      <div className="grid grid-cols-2 mx-16 mt-12 items-center">
+      <div className="grid grid-cols-2 mx-5 md:mx-16 mt-12 items-center">
         <div className="rounded-[24px]">
           <img
             src={logo}
