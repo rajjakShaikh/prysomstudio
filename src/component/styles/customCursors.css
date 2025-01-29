@@ -1,0 +1,102 @@
+.cursor-arrow-left {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 20 20'><path d='M15,2.5 Q15,2.5 14.5,2.5 L2.5,10 Q2,10 2.5,10 L14.5,17.5 Q15,17.5 15,17.5 Z' fill='%23000000' stroke='%23ffffff' stroke-width='1'/></svg>") 10 10, auto;
+}
+
+.cursor-arrow-right {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 20 20'><path d='M5,2.5 Q5,2.5 5.5,2.5 L17.5,10 Q18,10 17.5,10 L5.5,17.5 Q5,17.5 5,17.5 Z' fill='%23000000' stroke='%23ffffff' stroke-width='1'/></svg>") 10 10, auto;
+}
+
+.cursor-none {
+  cursor: none !important;
+}
+
+.glass-cursor {
+  width: 24px;
+  height: 24px;
+  background:#ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(4px);
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 70%;
+
+  /* transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease; */
+  /* mix-blend-mode: difference; */
+}
+
+.glass-cursor.active {
+  width: 20px;
+  height: 20px;
+  background:#FFFFFF;
+  border-color: #FFFFFF;
+  opacity: 70%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Custom Pagination Styles */
+.custom-pagination {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 20;
+  padding: 8px;
+  background-color: #FFFFFF99;
+  visibility: calc(80%);
+  --tw-backdrop-blur: 16px;
+  border-radius: 8px;
+}
+
+.pagination-dot {
+  width: 28px;
+  height: 6px;
+  background: #7c7c7c;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+.pagination-dot:hover {
+  background: #29292A;
+}
+
+.pagination-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #29292A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0s linear;
+}
+
+.pagination-dot.active::after {
+  animation: progressBar 4.5s linear forwards;
+  -webkit-animation: progressBar 4.5s linear forwards;
+}
+
+@keyframes progressBar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Reset animation when switching slides */
+.pagination-dot:not(.active)::after {
+  transform: scaleX(0);
+  transition: none;
+}

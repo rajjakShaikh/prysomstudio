@@ -13,7 +13,8 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "framer-motion": "^12.0.0",
+    "framer-motion": "^12.0.6",
+    "progressive-blur": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lazy-load-image-component": "^1.6.3",
@@ -21,7 +22,8 @@
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.8.4",
-    "swiper": "^11.2.1"
+    "swiper": "^11.2.1",
+    "tailwind-scrollbar-hide": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

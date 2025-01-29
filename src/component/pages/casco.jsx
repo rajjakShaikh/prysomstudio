@@ -26,9 +26,10 @@ export default function Casco() {
   }
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    const scrollbar = Scrollbar.init(scrollContainer, {
+    const scrollbar = Scrollbar.init(document.querySelector("#nobar"), {
       damping: 0.1, // Adjust damping for smoothness
+      alwaysShowTracks: false, // Make sure tracks are not forced to show
+      continuousScrolling: true,
     });
   
     return () => {
@@ -103,7 +104,7 @@ export default function Casco() {
 
     <>
     
-    <div className="overflow-y-scroll h-screen" ref={scrollContainerRef}>
+    <div className="overflow-y-scroll h-screen scrollbar-hide" ref={scrollContainerRef}>
       <Header />
       <div className="flex my-12 gap-[120px]">
         {/* Right Side (Scrollable Images) */}

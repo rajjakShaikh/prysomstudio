@@ -12,13 +12,35 @@
   font-family: "Montserrat", serif;
 }
 
+
+.scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border-radius: 4px;
+}
+
 /* vertical images scrollbar hidden class  */
 
 #nobar::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hide scrollbar for Chrome, Safari */
 }
 
-/* @layer utilities {
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+
+.smooth-scrollbar {
+  display: none !important; /* Hide Smooth Scrollbar */
+}
+
+/* 
+ @layer utilities {
   .squircle {
     clip-path: polygon(
       100% 50%,
@@ -383,7 +405,7 @@
       100% 43.4%
     );
   }
-}
+} */
 
 /* Navigation arrows styles */
 .fixed {
@@ -404,3 +426,5 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+

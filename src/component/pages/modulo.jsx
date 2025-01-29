@@ -59,7 +59,6 @@ function AnimatedSection({ children, delay = 0 }) {
 
 export default function Modulo() {
 const navigate = useNavigate();
-const scrollContainerRef = useRef(null);
 
   const navigateToWork = () => {
     navigate("/work");
@@ -70,9 +69,10 @@ const scrollContainerRef = useRef(null);
   };
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    const scrollbar = Scrollbar.init(scrollContainer, {
+    const scrollbar = Scrollbar.init(document.querySelector("#nobar"), {
       damping: 0.1, // Adjust damping for smoothness
+      alwaysShowTracks: false, // Make sure tracks are not forced to show
+      continuousScrolling: true,
     });
   
     return () => {
@@ -82,11 +82,11 @@ const scrollContainerRef = useRef(null);
 
   return (
    
-      <div id="nobar" className="overflow-y-scroll h-screen" ref={scrollContainerRef}>
+      <div className="overflow-y-scroll h-screen scrollbar-hide">
         <Header />
         <div className="flex my-9 gap-[120px]">
           <div id="nobar" className="">
-            <div className="space-y-9 mx-5 md:mx-16">
+            <div className="space-y-9 main-img mx-5 md:mx-16">
               <AnimatedSection>
                 <LazyLoadImage
                   src={img1}
@@ -94,7 +94,7 @@ const scrollContainerRef = useRef(null);
                   className="w-full rounded-[4px] h-full object-cover"
                   height="100%"
                   width="100%"
-                />
+                />  
               </AnimatedSection>
 
               <AnimatedSection delay={0.2}>
