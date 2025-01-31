@@ -35,8 +35,8 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [isHovering]);
 
   // Auto-advance slides when dot animation completes
@@ -53,11 +53,11 @@ export default function Home() {
   return (
     <div className="relative">
       {isHovering && (
-        <div 
-          className={`glass-cursor ${isHovering ? 'active' : ''}`}
-          style={{ 
-            left: `${cursorPosition.x}px`, 
-            top: `${cursorPosition.y}px` 
+        <div
+          className={`glass-cursor ${isHovering ? "active" : ""}`}
+          style={{
+            left: `${cursorPosition.x}px`,
+            top: `${cursorPosition.y}px`,
           }}
         />
       )}
@@ -82,18 +82,18 @@ export default function Home() {
           <SwiperSlide className="w-full h-full">
             <div className="w-full h-full">
               <div className="relative w-full h-full">
-                <div 
-                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left" 
+                <div
+                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left"
                   onClick={() => swiperRef.current?.swiper?.slidePrev()}
                 />
-                <NavLink 
-                  to={"/work/modulo"} 
+                <NavLink
+                  to={"/work/modulo"}
                   className="absolute left-1/3 top-0 w-1/3 h-full z-10 cursor-none "
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 />
-                <div 
-                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right" 
+                <div
+                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right"
                   onClick={() => swiperRef.current?.swiper?.slideNext()}
                 />
                 <div className="flex justify-center items-center w-full h-full">
@@ -110,18 +110,18 @@ export default function Home() {
           <SwiperSlide className="w-full h-full">
             <div className="w-full h-full">
               <div className="relative w-full h-full">
-                <div 
-                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left" 
+                <div
+                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left"
                   onClick={() => swiperRef.current?.swiper?.slidePrev()}
                 />
-                <NavLink 
-                  to={"/work/heat"} 
+                <NavLink
+                  to={"/work/heat"}
                   className="absolute left-1/3 top-0 w-1/3 h-full z-10 cursor-none"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 />
-                <div 
-                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right" 
+                <div
+                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right"
                   onClick={() => swiperRef.current?.swiper?.slideNext()}
                 />
                 <LazyLoadImage
@@ -135,19 +135,19 @@ export default function Home() {
           <SwiperSlide className="w-full h-full">
             <div className="w-full h-full">
               <div className="relative w-full h-full">
-                <div 
-                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left" 
+                <div
+                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left"
                   onClick={() => swiperRef.current?.swiper?.slidePrev()}
                 />
-                <NavLink 
-                  to={"/work/casco"} 
+                <NavLink
+                  to={"/work/casco"}
                   className="absolute left-1/3 top-0 w-1/3 h-full z-10 cursor-none"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 />
-                <div 
-                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right" 
-                  onClick={() => swiperRef.current?.swiper?.slideNext()}  
+                <div
+                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right"
+                  onClick={() => swiperRef.current?.swiper?.slideNext()}
                 />
                 <LazyLoadImage
                   src={homeimage3}
@@ -160,18 +160,18 @@ export default function Home() {
           <SwiperSlide className="w-full h-full">
             <div className="w-full h-full">
               <div className="relative w-full h-full">
-                <div 
-                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left" 
+                <div
+                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left"
                   onClick={() => swiperRef.current?.swiper?.slidePrev()}
                 />
-                <NavLink 
-                  to={"/work/modulo"} 
+                <NavLink
+                  to={"/work/modulo"}
                   className="absolute left-1/3 top-0 w-1/3 h-full z-10 cursor-none"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 />
-                <div 
-                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right" 
+                <div
+                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right"
                   onClick={() => swiperRef.current?.swiper?.slideNext()}
                 />
                 <LazyLoadImage
@@ -185,18 +185,18 @@ export default function Home() {
           <SwiperSlide>
             <div className="relative w-full h-screen">
               <div className="absolute inset-0 w-full h-full">
-                <div 
-                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left" 
+                <div
+                  className="absolute left-0 top-0 w-1/3 h-full z-10 cursor-arrow-left"
                   onClick={() => swiperRef.current?.swiper?.slidePrev()}
                 />
-                <NavLink 
-                  to={"/work/heat"} 
+                <NavLink
+                  to={"/work/heat"}
                   className="absolute left-1/3 top-0 w-1/3 h-full z-10 cursor-none"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 />
-                <div 
-                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right" 
+                <div
+                  className="absolute right-0 top-0 w-1/3 h-full z-10 cursor-arrow-right"
                   onClick={() => swiperRef.current?.swiper?.slideNext()}
                 />
                 <LazyLoadImage
@@ -214,7 +214,9 @@ export default function Home() {
           {[...Array(totalSlides)].map((_, index) => (
             <div
               key={index}
-              className={`pagination-dot ${index === activeIndex ? 'active' : ''}`}
+              className={`pagination-dot ${
+                index === activeIndex ? "active" : ""
+              }`}
               onClick={() => {
                 swiperRef.current?.swiper?.slideTo(index);
               }}

@@ -8,12 +8,12 @@ export default function Header() {
   return (
     <>
       {/* Header Start */}
-      <div className="grid grid-cols-2 mx-8 px-8 my-6 py-6 rounded-[24px] items-center bg-[#FFFFFF66]">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-8 px-8 my-6 py-6 rounded-[24px] items-center bg-[#FFFFFF66]">
         <div className="rounded-[24px]">
           <img
             src={logo}
             alt="logo"
-            className="h-[36px] w-[141px]  cursor-pointer" 
+            className="h-[36px] w-[141px]  cursor-pointer"
             onClick={() => navigate("/")}
           />
         </div>

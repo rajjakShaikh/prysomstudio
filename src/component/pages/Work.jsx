@@ -6,7 +6,7 @@ import home5 from "../pages/images/home5.png";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import {  LinearBlur } from "progressive-blur";
+import { LinearBlur } from "progressive-blur";
 import Scrollbar from "smooth-scrollbar";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -80,10 +80,14 @@ const Work = () => {
       </motion.div>
 
       <div id="nobar" className="mx-5 md:mx-16 my-12 md:my-12 scrollbar-hide">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 md:gap-x-5 gap-y-5 md:gap-y-6">
+        <div
+          id="nobar"
+          className="scrollbar-hide overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-5 gap-y-5 md:gap-y-6"
+        >
           {images.map((image, index) => (
             <motion.div
               key={index}
+              id="nobar"
               className="relative group cursor-pointer overflow-hidden rounded-[16px] hover:rounded-[24px] scrollbar-hide"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
